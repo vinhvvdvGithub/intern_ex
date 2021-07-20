@@ -14,6 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//API
+//API ROUTE REGISTER
+Route::post('/dangki','OveAuth\ApiUserController@register')->name('dangki');
+// Route::get('/dangki','OveAuth\ApiUserController@create')->name('dangki');
+
+
+//API ROUTE LOGIN
+Route::post('/dangnhap','OveAuth\ApiUserController@login')->name('api/dangnhap');
+// Route::get('/dangnhap','OveAuth\ApiUserController@create')->name('api/dangnhap');
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });

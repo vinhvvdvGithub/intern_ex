@@ -43,6 +43,7 @@ class RegisterController extends Controller
         $user->password =Hash::make($request['password']);
         $user->save();
         return view('/home');
+      
     }
 
     /**

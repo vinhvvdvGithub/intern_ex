@@ -43,3 +43,6 @@ Route::post('/edit-game/{id}','Game\GameController@update')->name('edit-game');
 
 //DELETE GAME
 Route::post('/delete-game/{id}','Game\GameController@destroy')->name('delete-game');
+
+
+
