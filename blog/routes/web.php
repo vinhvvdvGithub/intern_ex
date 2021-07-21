@@ -31,18 +31,18 @@ Route::post('/dangnhap','OveAuth\LoginController@postLogin')->name('dangnhap');
 
 //GAME
 //ADD NEW GAME
-Route::get('/list-game','Game\GameController@index')->name('list-game');
-Route::get('/add-game','Game\GameController@create');
-Route::post('/add-game','Game\GameController@store')->name('add-game');
+// Route::get('/list-game','Game\GameController@index')->name('list-game');
+// Route::get('/add-game','Game\GameController@create');
+// Route::post('/add-game','Game\GameController@store')->name('add-game');
 
-//EDIT GAME
-Route::get('/edit-game/{id}','Game\GameController@edit')->name('edit-game');
-Route::post('/edit-game/{id}','Game\GameController@update')->name('edit-game');
+// //EDIT GAME
+// Route::get('/edit-game/{id}','Game\GameController@edit')->name('edit-game');
+// Route::post('/edit-game/{id}','Game\GameController@update')->name('edit-game');
 
 
 
-//DELETE GAME
-Route::post('/delete-game/{id}','Game\GameController@destroy')->name('delete-game');
+// //DELETE GAME
+// Route::post('/delete-game/{id}','Game\GameController@destroy')->name('delete-game');
 
 
 

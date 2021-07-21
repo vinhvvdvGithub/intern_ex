@@ -21,6 +21,7 @@ class ApiUserController extends Controller
         $user->name = $request['name'];
         $user->email = $request['email'];
         $user->password =Hash::make($request['password']);
+        // $user->tokne();
         $user->save();
 
         return response()->json($user);
@@ -32,11 +33,12 @@ class ApiUserController extends Controller
     //
     public function login(Request $request){
         if(Auth::attempt(['email'=>$request->email,'password'=>$request->password])){
-           $user = Auth::user();
-            return response()->json($user);
         
+            $user = User::whereEmail($request->email)->first();
+            $user->token = $user->createToken('App')->accessToken;
+            return response()->json($user);
         }else{
-            dd("login error");
+            abort("sai len dang nhap hoac mat khau",403);
         }
         
     }
